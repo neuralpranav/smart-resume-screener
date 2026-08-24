@@ -2,6 +2,8 @@ from app.schemas.common import HealthResponse, MessageResponse
 from app.schemas.job import JobBase, JobCreate, JobUpdate, JobRead
 from app.schemas.candidate import CandidateBase, CandidateCreate, CandidateRead, ResumeBase, ResumeRead, ResumeSummary
 from app.schemas.screening import (
+    ScreeningRequest,
+    BatchScreeningRequest,
     ScreeningResultBase,
     ScreeningResultCreate,
     ScreeningResultRead,
@@ -22,6 +24,8 @@ __all__ = [
     "ResumeBase",
     "ResumeRead",
     "ResumeSummary",
+    "ScreeningRequest",
+    "BatchScreeningRequest",
     "ScreeningResultBase",
     "ScreeningResultCreate",
     "ScreeningResultRead",

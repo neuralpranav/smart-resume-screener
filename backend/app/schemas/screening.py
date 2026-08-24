@@ -16,6 +16,16 @@ class ScreeningResultBase(BaseModel):
     is_shortlisted: bool = Field(default=False, description="Whether the candidate is marked as shortlisted")
 
 
+class ScreeningRequest(BaseModel):
+    job_id: str = Field(..., description="Target Job Description ID")
+    resume_id: str = Field(..., description="Resume ID to screen")
+
+
+class BatchScreeningRequest(BaseModel):
+    job_id: str = Field(..., description="Target Job Description ID")
+    resume_ids: Optional[List[str]] = Field(None, description="Optional list of Resume IDs. If omitted or empty, all uploaded resumes will be screened.")
+
+
 class ScreeningResultCreate(ScreeningResultBase):
     job_id: str
     resume_id: str

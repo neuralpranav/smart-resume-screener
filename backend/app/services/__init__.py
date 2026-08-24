@@ -14,6 +14,27 @@ from app.services.evaluation_service import (
     BaseEvaluator,
     RuleBasedEvaluator,
 )
+from app.services.job_service import (
+    create_job,
+    get_job,
+    list_jobs,
+    update_job,
+    delete_job,
+)
+from app.services.resume_service import (
+    process_and_save_resume,
+    get_resume,
+    list_resumes,
+    delete_resume,
+)
+from app.services.screening_service import (
+    screen_resume,
+    batch_screen,
+    get_screening_result,
+    get_job_screening_results,
+    get_ranked_candidates,
+    toggle_shortlist,
+)
 
 __all__ = [
     "validate_file",
@@ -28,4 +49,19 @@ __all__ = [
     "evaluate_candidate_resume",
     "BaseEvaluator",
     "RuleBasedEvaluator",
+    "create_job",
+    "get_job",
+    "list_jobs",
+    "update_job",
+    "delete_job",
+    "process_and_save_resume",
+    "get_resume",
+    "list_resumes",
+    "delete_resume",
+    "screen_resume",
+    "batch_screen",
+    "get_screening_result",
+    "get_job_screening_results",
+    "get_ranked_candidates",
+    "toggle_shortlist",
 ]
